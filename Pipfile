@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-tensorflow = "*"
+tensorflow = "==2.3.1"
 matplotlib = "*"
 networkx = "*"
 scipy = "*"
@@ -12,9 +12,16 @@ scikit-learn = "*"
 numpy = "*"
 keras = "*"
 pyedflib = "*"
+scikit-image = "*"
+statsmodels = "*"
+torch = "*"
+torch-cluster = "*"
+torch-geometric = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "3.11"
 python_full_version = "3.11.2"
+

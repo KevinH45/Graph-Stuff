@@ -9,7 +9,6 @@ Type = "float32"
 
 class GraphConvolution(tf.keras.layers.Layer):
     """ Graph convolution layer """
-
     def __init__(self, input_dim, output_dim, num, act=tf.nn.relu, **kwargs):
         super().__init__(**kwargs)
         w_init = tf.random_normal_initializer()

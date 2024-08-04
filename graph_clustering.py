@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 from scipy.sparse.csgraph import minimum_spanning_tree
-from graphfeatures import Degree
+from graph_features import Degree
 import scipy.linalg as la
 from collections import Counter
 from sklearn.cluster import SpectralClustering, AffinityPropagation, AgglomerativeClustering
@@ -53,9 +53,9 @@ def graph_representation(train_A, graph_num=None, Prop='cluster_C', plotting=Tru
     if (graph_num == None):
         graph_num = random.randint(1, len(train_A)) - 1
     n = train_A.shape[1]
+    train_bA = A_binarize(train_A)
     if (Prop == 'degree_D_first'):
         # degree distribution
-        train_bA = A_binarize(train_A)
         if (plotting): plt.figure(); u = plt.hist(np.diag(Degree(train_bA[graph_num])))
         m = (u[1][1:len(u[1])] - u[1][0:len(u[1]) - 1]) / 2 + u[1][0:len(u[1]) - 1]
         if (plotting): plt.bar(m, np.divide(u[0], m))  # p(K) = N_K/K
