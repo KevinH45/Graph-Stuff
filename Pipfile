@@ -9,8 +9,6 @@ matplotlib = "*"
 networkx = "*"
 scipy = "*"
 scikit-learn = "*"
-numpy = "*"
-keras = "*"
 pyedflib = "*"
 scikit-image = "*"
 statsmodels = "*"
@@ -23,5 +21,3 @@ ipykernel = "*"
 
 [requires]
 python_version = "3.12"
-python_full_version = "3.12.3"
-
